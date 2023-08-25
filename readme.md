@@ -10,6 +10,7 @@
 ## Run the python backend server
 ```cd server```
 ```cd flask-app```
+```python app.py```
 
 ## Start the app
 ```cd client```
@@ -22,9 +23,9 @@ in client directory
 ```VITE_POST='AryShare Key```
 
 .env file in server directory should have   
-OPENAI_API_KEY=``OpenAPI KEY````
-MONGODB_URL=```MongoDB URL```
-GOOGLE_SEARCH_API=```google search api```
-CLOUDINARY_CLOUD_NAME=```CLOUDINARY_CLOUD_NAME```
-CLOUDINARY_API_KEY=```CLOUDINARY_API_KEY```
-CLOUDINARY_API_SECRET=```CLOUDINARY_API_SECRET```
+```OPENAI_API_KEY=OpenAPI KEY```
+```MONGODB_URL=MongoDB URL```
+```GOOGLE_SEARCH_API=google search api```
+```CLOUDINARY_CLOUD_NAME=CLOUDINARY_CLOUD_NAME```
+```CLOUDINARY_API_KEY=CLOUDINARY_API_KEY```
+```CLOUDINARY_API_SECRET=CLOUDINARY_API_SECRET```
