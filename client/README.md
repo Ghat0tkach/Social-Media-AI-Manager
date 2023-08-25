@@ -1,8 +1,24 @@
-# React + Vite
+# Installation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Install the dependencies
+```npm install```
 
-Currently, two official plugins are available:
+## Run the server
+```cd server```
+```npm start```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Run the python backend server
+```cd server```
+```cd flask-app```
+
+## Start the app
+```cd client```
+```npm run dev```
+
+please make sure to add .env files in both client and server directory
+in client directory
+.env file should have 
+```VITE_SECRET='OpenAI Key'
+   VITE_POST='AryShare Key'```
+
+.env file in server directory should have   
