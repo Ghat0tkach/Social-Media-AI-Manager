@@ -37,7 +37,7 @@ const SchedulePost = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 bg-white p-6 rounded-lg shadow-md">
+    <div className="max-w-md mx-auto mt-20 bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-xl mb-4">Share on Twitter</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">

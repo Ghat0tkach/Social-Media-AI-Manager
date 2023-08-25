@@ -1,7 +1,5 @@
 import { BrowserRouter,Route,Routes } from "react-router-dom"
-import {logo} from './assets';
-import { CreatePost, ImgCaption, SchedulePost, MainProduct, Dashboard} from './pages';
-import SocialMediaManager from "./pages/Api";
+import {  ImgCaption, SchedulePost,  Dashboard, Chatbot, GenerateImg, SocialMediaManagerGPT} from './pages';
 import FeatureSection from "./pages/homePage";
 import { Footer, Header } from "./components";
 import { DallEProvider } from "./context/DallEContext";
@@ -14,12 +12,11 @@ const App = () => {
       <Routes>
          <Route path="/" element={<FeatureSection/>}/>
          <Route path="/collections" element={<Dashboard/>}/>
-         <Route path="/analyse-img" element={<ImgCaption/>}/>
-         <Route path="/" element={<FeatureSection/>}/>
-         <Route path="/chat-bot" element={<SocialMediaManager/>}/>
-        <Route path="/create-post" element={<CreatePost/>}/>
-        <Route path="/schedule-post" element={<SchedulePost/>}/>
-        <Route path="/main-post" element={<MainProduct/>}/>
+         <Route path="/CaptionGPT" element={<ImgCaption/>}/>
+         <Route path="/Chatbot" element={<Chatbot/>}/>
+        <Route path="/generateImage" element={<GenerateImg/>}/>
+        <Route path="/schedulePost" element={<SchedulePost/>}/>
+        <Route path="/SocialMediaManagerGPT" element={<SocialMediaManagerGPT/>}/>
       </Routes>
     </main>
    

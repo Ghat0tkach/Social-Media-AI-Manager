@@ -13,11 +13,16 @@
     }
 }
 
-.prompt::-webkit-scrollbar {
-    width: 5px;
+::-webkit-scrollbar {
+  width: 0.5rem; 
 }
- 
-.prompt::-webkit-scrollbar-thumb {
-  background-color: #666e75;
-  border-radius: 5px;
+::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255); 
+}
+::-webkit-scrollbar-thumb {
+  background:#a4f6e5; 
+  border-radius: 0.3rem; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

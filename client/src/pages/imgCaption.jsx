@@ -62,78 +62,62 @@ function ImgCaption() {
         generateResponse(prediction);
       };
 
+  
+      
   return (
     <>
-    <div className="mt-10 bg-neutral-50 py-24 px-6 text-center dark:bg-neutral-900">
-    <h1 className="mt-10 mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl text-white">
-      Generate Content from your <br /><span className='text-blue-300'>Images</span>
-    </h1>
+    <section className="bg-neutral-50 py-32 px-6 mt-20 text-center dark:bg-neutral-900">
+      <h1 className="mt-10 mb-16 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl text-white">
+        Generate Content from your <br />
+        <span className="text-blue-300">Images</span>
+      </h1>
+    </section>
 
-  </div>
-  <div className="min-h-80 mt-10 flex flex-col lg:flex-row justify-around items-center bg-gray-100">
-  <div className="bg-white p-8 rounded shadow-lg mb-4 lg:mb-0 lg:mr-4 lg:flex-shrink-0">
-    <h1 className="text-2xl mb-4">Image Captioning App</h1>
-    <input
-      type="file"
-      accept="image/*"
-      onChange={handleFileChange}
-      className="mb-4"
-    />
-    {previewImage && (
-      <img src={previewImage} alt="Selected" className="max-w-md mb-4" />
-    )}
-    {isLoading ? (
-      <Loader />
-    ) : (
-      <button
-        onClick={handleUpload}
-        className="bg-blue-500 text-white py-2 px-4 rounded"
-      >
-        Upload and Analyze
-      </button>
-    )}
-    {prediction && <p className="mt-4">Prediction: {prediction}</p>}
-   
-  </div>
+    <div className="mt-16 mx-auto w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
+      <div className="bg-white p-8 rounded shadow-lg mb-8">
+        <h1 className="text-2xl mb-4">Image Captioning App</h1>
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handleFileChange}
+          className="mb-4"
+        />
+        {previewImage && (
+          <img src={previewImage} alt="Selected" className="max-w-md mb-4" />
+        )}
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <button
+            onClick={handleUpload}
+            className="bg-blue-500 text-white py-2 px-4 rounded w-full"
+          >
+            Upload and Analyze
+          </button>
+        )}
+        <p className="mt-4 text-gray-600">
+          Choose a file, click "Generate and Analyze,"<br /> then follow the next steps.
+        </p>
+        {prediction && <p className="mt-4">Prediction: {prediction}</p>}
+      </div>
 
-  <div className="bg-white p-8 rounded shadow-lg overflow-y-auto">
-  {prediction && (
-      <button className="bg-blue-500 text-white py-2 px-4 rounded" onClick={handleSubmit}>Generate content</button>
-    )}
-    <p>Your content will be generated here</p>
-    {isLoading2 ? <Loader /> : <p>{response}</p>}
-  </div>
-</div>
-
- 
+      <div className="bg-white p-8 rounded shadow-lg overflow-y-auto">
+        {prediction && (
+          <button
+            className="bg-blue-500 text-white py-2 px-4 rounded w-full"
+            onClick={handleSubmit}
+          >
+            Generate content
+          </button>
+        )}
+        <p className="mt-4">Your content will be generated here</p>
+        {isLoading2 ? <Loader /> : <p>{response}</p>}
+      </div>
+    </div>
     </>
   );
 }
-
-//  function SocialMediaManager({ initialPrediction }) {
-//     const [response, setResponse] = useState('');
-//     const [isLoading, setIsLoading] = useState(false);
-//     const [initialResponseGenerated, setInitialResponseGenerated] = useState(false);
-  
-   
-//     useEffect(() => {
-//       if (!initialResponseGenerated) {
-//         generateResponse();
-//         setInitialResponseGenerated(true);
-//       }
-//     }, [initialResponseGenerated]); // Call generateResponse when the component mounts
-  
-//     return (
-//       <>
-//         <button onClick={() => generateResponse(response)}>Generate More</button>
-  
-//         <div className="h-auto w-auto font-semibold text-xs bg-[#ECECF1] py-1 px-2 rounded-[5px] text-black">
-//           {isLoading ? <Loader /> : <p>{response}</p>}
-//         </div>
-//       </>
-//     );
-//   }
-
     
+
 
 export default ImgCaption

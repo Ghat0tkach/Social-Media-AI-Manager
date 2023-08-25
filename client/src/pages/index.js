@@ -1,14 +1,14 @@
-import Dashboard from "./Dashboard";
-import CreatePost from "./CreatePost";
-import Api from "./Api";
+import Dashboard from "./dashboard";
+import GenerateImg from "./generateImg";
+import Chatbot from "./chatbot";
 import ImgCaption from "./imgCaption";
 import SchedulePost from "./schedulePost";
-import MainProduct from "./mainProduct";
+import SocialMediaManagerGPT from "./socialMediaManagerGPT";
 export{
     Dashboard,
-    CreatePost,
-    Api,
+    GenerateImg,
+    Chatbot,
     ImgCaption,
     SchedulePost,
-    MainProduct
+    SocialMediaManagerGPT
 }

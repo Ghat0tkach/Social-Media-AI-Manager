@@ -1,59 +1,7 @@
 // import React from 'react';
 // import { content } from '../assets';
+import { Link } from 'react-router-dom';
 import { FeatureBox, HeroSection } from '../components';
-
-// const FeatureSection = () => (
-//   <div>
-//     <div classNameName="ribbon" style={{ backgroundImage: 'url(/images/components/ribbon/rainbow.png)' }}></div>
-//     <div classNameName="text-center">
-//       <h1 classNameName="text-4xl font-bold text-purple-700 mb-4">Social Media Management made simple</h1>
-//       <h3 classNameName="text-lg text-gray-600">With Your Personal Assistant</h3>
-//     </div>
-
-//     <div classNameName="flex flex-col-reverse md:flex-row justify-center items-center p-8 md:space-x-8 space-y-8 md:space-y-0">
-//       <div classNameName="w-full md:w-1/2 space-y-8">
-//         <FeatureBox
-//           icon={<i classNameName="fas fa-code"></i>}
-//           title="Generate textual Content"
-//           description="Description for Feature 1"
-//         />
-       
-//         <FeatureBox
-//           icon={<i classNameName="fas fa-cog"></i>}
-//           title="Engage with AI"
-//           description="Description for Feature 2"
-//         />
-        
-//         <FeatureBox
-//           icon={<i classNameName="fas fa-chart-bar"></i>}
-//           title="View Past Performance"
-//           description="Description for Feature 3"
-//         />
-//         <FeatureBox
-//           icon={<i classNameName="fas fa-users"></i>}
-//           title="Schedule Posts"
-//           description="Description for Feature 4"
-//         />
-//         <FeatureBox
-//           icon={<i classNameName="fas fa-wrench"></i>}
-//           title="Leverage captioning from Images"
-//           description="Description for Feature 5"
-//         />
-//       </div>
-//       <div classNameName="w-full md:w-1/2">
-//         <img
-//           src={content}
-//           alt="Feature Image"
-//           classNameName="object-cover h-full w-full rounded-lg"
-//         />
-//       </div>
-//     </div>
-//   </div>
-// );
-
-
-
-
 import React from 'react';
  function FeaturesBlocks() {
     return (
@@ -76,7 +24,8 @@ import React from 'react';
             <div className="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start md:max-w-2xl lg:max-w-none">
   
               {/* 1st item */}
-              <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
+              <Link to='/chatbot'>
+              <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl hover:scale-105 transition-all">
                 <svg className="w-16 h-16 p-1 -mt-1 mb-2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                   <g fill="none" fillRule="evenodd">
                     <rect className="fill-current text-blue-600" width="64" height="64" rx="32" />
@@ -88,12 +37,14 @@ import React from 'react';
                     </g>
                   </g>
                 </svg>
-                <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Content Generation</h4>
+                <Link to='/chatbot' className="text-xl font-bold leading-snug tracking-tight mb-1">Content Generation</Link>
                 <p className="text-gray-600 text-center">Analyze latest social media trends and provides the best content !</p>
               </div>
+              </Link>
   
               {/* 2nd item */}
-              <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
+              <Link to='/generateImages'>
+              <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl scale-105 transition-all">
                 <svg className="w-16 h-16 p-1 -mt-1 mb-2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                   <g fill="none" fillRule="evenodd">
                     <rect className="fill-current text-blue-600" width="64" height="64" rx="32" />
@@ -104,12 +55,14 @@ import React from 'react';
                     </g>
                   </g>
                 </svg>
-                <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Generate Images</h4>
+                <Link to='/generateImages' className="text-xl font-bold leading-snug tracking-tight mb-1">Generate Images</Link>
                 <p className="text-gray-600 text-center">Craft or search beautiful appealing images for your needs</p>
               </div>
+              </Link>
   
               {/* 3rd item */}
-              <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
+              <Link to='/dashboard'>
+              <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl hover:scale-105 transition-all">
                 <svg className="w-16 h-16 p-1 -mt-1 mb-2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                   <g fill="none" fillRule="evenodd">
                     <rect className="fill-current text-blue-600" width="64" height="64" rx="32" />
@@ -121,12 +74,13 @@ import React from 'react';
                     </g>
                   </g>
                 </svg>
-                <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Collection</h4>
+                <Link to='/dashboard' className="text-xl font-bold leading-snug tracking-tight mb-1">Collection</Link>
                 <p className="text-gray-600 text-center">Saves your generated images or download them at Click</p>
               </div>
-  
+              </Link>
               {/* 4th item */}
-              <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
+              <Link to='./captionGPT'>
+              <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl hover:scale-105 transition-all" >
                 <svg className="w-16 h-16 p-1 -mt-1 mb-2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                   <g fill="none" fillRule="evenodd">
                     <rect className="fill-current text-blue-600" width="64" height="64" rx="32" />
@@ -138,12 +92,14 @@ import React from 'react';
                     </g>
                   </g>
                 </svg>
-                <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Image-to-Caption</h4>
+                <Link to='./captionGPT' className="text-xl font-bold leading-snug tracking-tight mb-1">Image-to-Caption</Link>
                 <p className="text-gray-600 text-center">Generate mesmerising captions with your uploaded Photos!</p>
               </div>
+              </Link>
   
               {/* 5th item */}
-              <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
+              <Link to='./schedulePost'>
+              <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl hover:scale-110 transition-all">
                 <svg className="w-16 h-16 p-1 -mt-1 mb-2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                   <g fill="none" fillRule="evenodd">
                     <rect className="fill-current text-blue-600" width="64" height="64" rx="32" />
@@ -157,9 +113,11 @@ import React from 'react';
                 <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Automate Posting!</h4>
                 <p className="text-gray-600 text-center">Automate user-generated photos with captions !</p>
               </div>
+              </Link>
   
               {/* 6th item */}
-              <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl">
+              <Link to='./socialMediaManagerGPT'>
+              <div className="relative flex flex-col items-center p-6 bg-white rounded shadow-xl hover:scale-105 transition-all">
                 <svg className="w-16 h-16 p-1 -mt-1 mb-2" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                   <g fill="none" fillRule="evenodd">
                     <rect className="fill-current text-blue-600" width="64" height="64" rx="32" />
@@ -169,10 +127,10 @@ import React from 'react';
                     </g>
                   </g>
                 </svg>
-                <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Powerful AI</h4>
+                <Link to='./socialMediaManagerGPT' className="text-xl font-bold leading-snug tracking-tight mb-1">Powerful AI</Link>
                 <p className="text-gray-600 text-center">Generate , visualise and post content with a Single click</p>
               </div>
-  
+              </Link>
             </div>
   
           </div>
@@ -186,23 +144,6 @@ function FeatureSection() {
    
    <section className="relative">
 
-{/* Illustration behind hero content */}
-{/* <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1" aria-hidden="true">
-  <svg width="1360" height="578" viewBox="0 0 1360 578" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="illustration-01">
-        <stop stopColor="#FFF" offset="0%" />
-        <stop stopColor="#EAEAEA" offset="77.402%" />
-        <stop stopColor="#DFDFDF" offset="100%" />
-      </linearGradient>
-    </defs>
-    <g fill="url(#illustration-01)" fillRule="evenodd">
-      <circle cx="1232" cy="128" r="128" />
-      <circle cx="155" cy="443" r="64" />
-    </g>
-  </svg>
-</div> */}
-
 <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
   {/* Hero content */}
@@ -210,7 +151,7 @@ function FeatureSection() {
         {/* Section header */}
         <div className="text-center pb-12 md:pb-16">
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">Manage Social Media <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">with AI</span></h1>
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto" >
             <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">
                 Manage your social media with our AI 
             </p>

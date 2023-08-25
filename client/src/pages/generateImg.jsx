@@ -5,7 +5,7 @@ import { preview } from '../assets';
 import { getRandomPrompt } from '../utils';
 import { FormField, Loader } from '../components';
 
-const CreatePost = () => {
+const GenerateImg = () => {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
@@ -122,7 +122,7 @@ const CreatePost = () => {
             handleSurpriseMe={handleSurpriseMe}
           />
 
-          <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center">
+          <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center hover:scale-105 transition-all items-center">
             { form.photo ? (
               <img
                 src={form.photo}
@@ -149,26 +149,26 @@ const CreatePost = () => {
           <button
             type="button"
             onClick={generateImage}
-            className=" text-white bg-green-700 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            className=" text-white bg-green-700 font-medium rounded-md text-sm w-full hover:scale-105 transition-all  hover:bg-cyan-300 hover:text-slate-600 sm:w-auto px-5 py-2.5 text-center"
           >
-            {generatingImg ? 'Generating...' : 'Generate'}
+            {generatingImg ? 'Generating...' : 'Generate Using AI'}
           </button>
           <button
             type="button"
             onClick={generateImageUsingUnsplash}
-            className=" text-white bg-green-700 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            className=" text-white bg-green-700 font-medium hover:scale-105 transition-all hover:bg-slate-600 hover:text-cyan-300 rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
           >
             {generatingImg ? 'Generating...' : 'Generate Using Unsplash'}
           </button>
         </div>
 
         <div className="mt-10">
-          <p className="mt-2 text-[#666e75] text-[14px]">** Once you have created the image you want, you can share it with others in the community **</p>
+          <p className="mt-2 text-[#666e75] text-[14px]">Loved the creation? Add to the Dashboard!</p>
           <button
             type="submit"
-            className="mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            className="mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center hover:scale-105 transition-all"
           >
-            {loading ? 'Sharing...' : 'Share with the Community'}
+            {loading ? <Loader/> : 'Add to the Dashboard'}
           </button>
         </div>
       </form>
@@ -176,4 +176,4 @@ const CreatePost = () => {
   );
 };
 
-export default CreatePost;
+export default GenerateImg;

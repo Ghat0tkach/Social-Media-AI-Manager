@@ -32,7 +32,7 @@ function DallEComponent(prompt){
             setForm({ ...form, photo: data.photo});
             console.log(prompt)
             console.log(form.photo)
-            addDallEResponse(data.photo, form.prompt);
+            
           } catch (err) {
             alert(err);
           } finally {
@@ -103,7 +103,7 @@ function DallEComponent(prompt){
   
     return (
         <div className="container mx-auto py-8">
-        <h1 className="text-2xl font-semibold mb-4">LangChain Responses</h1>
+        <h1 className="text-2xl font-semibold mb-4">AI GENERATED CAPTION AND IMAGE</h1>
         <button
           className="bg-blue-500 text-white font-semibold py-2 px-4 rounded disabled:opacity-50"
           onClick={handleGenerateResponses}
@@ -219,26 +219,23 @@ function RealTimeTrendingStories() {
     );
 }
 
+function SocialMediaManagerGPT() {
 
-function MainProduct() {
-    const { dallEResponses } = useDallE();
 
-    return (
-        <div className="app">
-            <RealTimeTrendingStories />
-            <div>
-                <h2>DallE Responses:</h2>
-                <ul>
-                    {dallEResponses.map((response, index) => (
-                        <li key={index}>
-                            <strong>Caption:</strong> {response.caption}<br />
-                            <strong>Photo:</strong> {response.photo}<br />
-                            <br />
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </div>
-    );
+  return (
+      <div className="min-h-screen mt-20 bg-gradient-to-r from-blue-400 to-purple-600 py-10 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+              <div className="text-center">
+                  <h1 className="text-3xl font-extrabold text-white">
+                      Social Media Manager with GPT-3
+                  </h1>
+              </div>
+              <div className="mt-10">
+                  <RealTimeTrendingStories />
+                
+              </div>
+          </div>
+      </div>
+  );
 }
-export default MainProduct
+export default SocialMediaManagerGPT

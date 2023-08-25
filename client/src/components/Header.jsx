@@ -1,9 +1,6 @@
-'use client'
-
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-
-import { logo } from '../assets';
+import {vite} from '../assets/index'
 import Dropdown from 'react-dropdown';
 import MobileMenu from './mobile-menu'
 
@@ -31,7 +28,7 @@ export default function Header() {
           <div className="shrink-0 mr-4">
             
             <Link to='/'>
-                <img src={logo}/>
+                <img src={vite}/>
             </Link>
           </div>
 
@@ -39,20 +36,26 @@ export default function Header() {
           <nav className="hidden md:flex md:grow">
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
-            <li><Link to='./chat-bot'>AI-Bot</Link></li>
+            <li><Link to='./Chatbot'>AI-Bot</Link></li>
               <li>
                 <Link to='/collections' className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">Dashboard</Link>
               </li>
               <li>
-                <Link to='/analyse-img' className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">Image Analysis</Link>
+                <Link to='/CaptionGPT' className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">Image Analysis</Link>
               </li>
               <li>
-                <Link to='/create-post' className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">Generate Image</Link>
+                <Link to='/generateImage' className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">Generate Image</Link>
               </li>
               <li>
-                <Link to="/schedule-post" className="btn-sm p-2 text-gray-200 bg-blue-900 hover:bg-gray-800 ml-3">
+                <Link to="/schedulePost" className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">
                   <span>Schedule posts</span>
                 </Link>
+              </li>
+              <li>
+              <Link to="/socialMediaManagerGPT" className="inline-block px-4 py-2 bg-blue-900 text-gray-200 hover:bg-gray-800 transition duration-300 ease-in-out ml-3 rounded-lg shadow">
+              SocialMediaManagerGPT
+             </Link>
+  
               </li>
             </ul>
 
