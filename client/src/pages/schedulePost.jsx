@@ -8,7 +8,7 @@ const SchedulePost = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const API_KEY = '5MA83GH-6EZ45ME-PS1TKHG-Q8V2PZM';
+    const API_KEY = import.meta.env.VITE_POST;
 
     const requestData = {
       post,
