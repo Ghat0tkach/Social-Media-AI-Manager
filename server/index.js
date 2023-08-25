@@ -4,7 +4,9 @@ import cors from 'cors';
 import connectDB from './mongodb/connect.js';
 import postRoutes from './routes/postRoutes.js'
 import dalleRoutes from './routes/dalleRoutes.js'
-
+import googleTrends from './routes/googleTrends.js'
+import searchTrends from './routes/searchTrends.js'
+import postTwitter from './routes/postTwitter.js'
 dotenv.config();
 
 const app=express();
@@ -13,6 +15,9 @@ app.use(express.json({limit:'50mb'}));
 
 app.use('/api/v1/post',postRoutes);
 app.use('/api/v1/dalle',dalleRoutes);
+app.use('/api/v1/googletrends',googleTrends)
+app.use('/api/v1/searchtrends',searchTrends)
+app.use('/api/v1/posttweet',postTwitter)
 
 
 
