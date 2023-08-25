@@ -16,7 +16,7 @@ const Post = ({ imageUrl, caption }) => {
         mediaUrls: imageUrl ? [imageUrl] : []
       };
 
-      const API_KEY = '5MA83GH-6EZ45ME-PS1TKHG-Q8V2PZM';
+      const API_KEY = import.meta.env.VITE_POST;
 
       const response = await axios.post('https://app.ayrshare.com/api/post', requestData, {
         headers: {
