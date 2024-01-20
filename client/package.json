@@ -12,7 +12,7 @@
   "dependencies": {
     "@chatscope/chat-ui-kit-react": "^1.10.1",
     "@headlessui/react": "^1.7.17",
-    "axios": "^1.4.0",
+    "axios": "^1.6.0",
     "file-saver": "^2.0.5",
     "install": "^0.13.0",
     "langchain": "^0.0.131",
